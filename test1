@@ -1,0 +1,148 @@
+EX-MS10 | Javascript Lab # 1
+Javascript | 27/09/20
+
+Ask User to enter name, then display the same name with welcome message.
+var personname = prompt("Please enter your name");
+console.log("WELCOME "+ personname);
+
+Ask User to enter number, then check either the number is Even or Odd.
+Hint: parseInt(‘2’) => 2
+
+function checkevenorodd(checkevenorode){
+if(checkevenorode % 2 == 0){
+    console.log("This is even number")
+}else if(checkevenorode % 3 == 0){
+    console.log("This is odd number")
+}else{
+    console.log("number is not even or odd")
+}
+}
+var checkevenorode = prompt("Please enter any number");
+checkevenorodd(checkevenorode)
+
+If num =5; Solve these individual blocks separately ..
+
+++num + num-- + --num + --num + num == 22 ?
+Note: In notepad, using your brain not using console :)
+
+Like:
+num=5
+1) solving ++num:
+due to pre-increment -> 6
+2) solving num--
+due to post decrement ->
+etc ….
+Answer:
+ solving ++num:
+due to pre-increment -> 6
+
+ solving num--:
+due to pre-increment -> 6
+
+
+solving --num:
+due to pre-increment -> 4
+
+solving --num:
+due to pre-increment -> 3
+
+solving num:
+due to pre-increment -> 3
+
+
+Ask user to enter day in numbers, and show user which day it is Like (Moday, Tuesday etc...)
+Show error ‘Enter number within range etc…….’ if user enter an invalid number….
+var daysarray = ["Monday", "Tuesday", "Wednesday", "Thuesday", "Friday", "Saturday", "Sunday"]
+var number = prompt("enter day in number");
+if(parseInt(number) == "NaN"){
+	alert("enter an invalid number")
+} else if( number > 12){
+	alert("Please enter only 1 to 12")	
+}else{
+	alert("The enter day is "+daysarray[number-1])
+}
+
+What’s the difference between === & == , != & !== ?
+=== will compare type and value both
+== will only compare value
+!= will compare not equal value
+!= will compare not equal value and type (typeof)
+
+Write a table of 9 with proper formatting ?
+
+function table(parameter){
+    for(let i = 1;i<11;i++){
+    console.log(
+        parameter + " X " + i + " = "+ parameter * i  
+    );
+    }
+}
+var number = prompt("enter day in number");
+table(number);
+
+Make a program that show user a welcome message Welcome To Farenheit/Celcius Convertor. 
+i) then ask user to select either they want to convert from farenhite to celcius or celcius to farenhite ?
+ii) then ask for the conversion number
+iii) calculate the result & show it in alert 
+farenheight
+console.log(number+"°F is equal to "+(number-32) * 5/9 );
+Celcius
+console.log(number+"°C is equal to "+(number * 9/5 + 32));
+
+Cylender function:
+function Cylender(type,number){
+    
+switch(type) {
+  
+case "Farenheit":
+    
+console.log(number+"°F is equal to "+(number-32) * 5/9 );
+    
+break;
+  
+case "Celcius":
+   
+console.log(number+"°C is equal to "+(number * 9/5 + 32));
+    
+break;
+  
+default:
+    
+console.log("Type is not define");
+
+}
+
+}
+
+
+function Cylender(type,number){
+    
+this.type = type;
+    
+this.number = number;
+
+}
+Cylender.prototype.checkcylender = function() {
+  
+switch(this.type) {
+  
+case "Farenheit":
+    
+console.log(this.number+"°F is equal to "+(this.number-32) * 5/9 );
+    
+break;
+  
+case "Celcius":
+   
+console.log(this.number+"°C is equal to "+(this.number * 9/5 + 32));
+    
+break;
+  
+default:
+    
+console.log("Type is not define");
+
+}
+
+};
+
