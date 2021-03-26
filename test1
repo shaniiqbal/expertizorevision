@@ -90,59 +90,58 @@ Celcius
 console.log(number+"°C is equal to "+(number * 9/5 + 32));
 
 Cylender function:
-function Cylender(type,number){
-    
-switch(type) {
-  
-case "Farenheit":
-    
-console.log(number+"°F is equal to "+(number-32) * 5/9 );
-    
-break;
-  
-case "Celcius":
-   
-console.log(number+"°C is equal to "+(number * 9/5 + 32));
-    
-break;
-  
-default:
-    
-console.log("Type is not define");
+function Cylender(type, number) {
+
+    switch (type) {
+
+        case "Farenheit":
+
+            console.log(number + "°F is equal to " + (number - 32) * 5 / 9);
+
+            break;
+
+        case "Celcius":
+
+            console.log(number + "°C is equal to " + (number * 9 / 5 + 32));
+
+            break;
+
+        default:
+
+            console.log("Type is not define");
+
+    }
 
 }
 
-}
 
+function Cylender(type, number) {
 
-function Cylender(type,number){
-    
-this.type = type;
-    
-this.number = number;
+    this.type = type;
+
+    this.number = number;
 
 }
 Cylender.prototype.checkcylender = function() {
-  
-switch(this.type) {
-  
-case "Farenheit":
-    
-console.log(this.number+"°F is equal to "+(this.number-32) * 5/9 );
-    
-break;
-  
-case "Celcius":
-   
-console.log(this.number+"°C is equal to "+(this.number * 9/5 + 32));
-    
-break;
-  
-default:
-    
-console.log("Type is not define");
 
-}
+    switch (this.type) {
+
+        case "Farenheit":
+
+            console.log(this.number + "°F is equal to " + (this.number - 32) * 5 / 9);
+
+            break;
+
+        case "Celcius":
+
+            console.log(this.number + "°C is equal to " + (this.number * 9 / 5 + 32));
+
+            break;
+
+        default:
+
+            console.log("Type is not define");
+
+    }
 
 };
-
